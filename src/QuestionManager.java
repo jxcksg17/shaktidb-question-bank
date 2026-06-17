@@ -20,6 +20,8 @@ int marks = Integer.parseInt(sc.nextLine());
 
 System.out.print("Enter Question: ");
 String question = sc.nextLine();
+String encryptedQuestion =
+        AESUtil.encrypt(question);
             Connection con = DBConnection.getConnection();
 
             String sql =
@@ -31,7 +33,7 @@ String question = sc.nextLine();
             pst.setInt(1, subjectId);
             pst.setString(2, difficulty);
             pst.setInt(3, marks);
-pst.setString(4, question);
+pst.setString(4, encryptedQuestion);
             pst.executeUpdate();
 
             System.out.println("Question Added Successfully");
@@ -72,7 +74,9 @@ pst.setString(4, question);
                         + " | "
                         + rs.getInt("marks")
 + " Marks | "
-                        + rs.getString("question_text")
+                        + AESUtil.decrypt(
+    rs.getString("question_text")
+)
                 );
 
             }
