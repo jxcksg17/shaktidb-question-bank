@@ -239,6 +239,45 @@ java -cp src:/usr/share/java/postgresql.jar Main
 6. View Audit Logs
 7. Exit
 ```
+---
+
+# Screenshots
+
+## Login Screen
+
+![Login](screenshots/login.png)
+
+---
+
+## Subject Management
+
+![Subjects](screenshots/subjects.png)
+
+---
+
+## Question Bank
+
+![Questions](screenshots/questions.png)
+
+---
+
+## Generated Question Paper
+
+![Question Paper](screenshots/question_paper.png)
+
+---
+
+## Audit Logs
+
+![Audit Logs](screenshots/audit_logs.png)
+
+---
+
+## Encrypted Questions Stored in ShaktiDB
+
+The database stores encrypted questions using AES encryption.
+
+![Encrypted Data](screenshots/encrypted_data.png)
 
 ---
 
